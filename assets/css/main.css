@@ -624,6 +624,7 @@
   border-radius: 2px;
   display: flex;
   align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .header__search-checkbox:checked ~ .header__search {
   display: flex;
@@ -1469,4 +1470,32 @@ i.product-item__like-icon-fill {
   line-height: 1.4rem;
   font-weight: 600;
   color: var(--white-color);
+}
+.breadcrumb-wrapper {
+  padding: 5px 0;
+}
+.breadcrumb-content {
+  margin: 8px 8px;
+  padding: 10px 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--white-color);
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.breadcrumb-item {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.breadcrumb-item__link {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+.breadcrumb-item--active .breadcrumb-item__link {
+  color: var(--primary-color);
 }

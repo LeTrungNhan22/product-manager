@@ -9,16 +9,19 @@
       href="./assets/img/favicon_icon.png"
       type="image/x-icon"
     />
-    <title>Shop - Manager</title>
-
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Shop Manager</title>
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/grid.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"
+      href="../../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
@@ -29,8 +32,8 @@
     <div class="app">
       <!-- Header start -->
       <header class="header">
-        <div class="grid">
-          <nav class="navbar">
+        <div class="grid wide">
+          <nav class="navbar hide-on-mobile-tablet">
             <ul class="navbar__list">
               <li
                 class="navbar__item navbar__item--hasqr navbar__item--separate"
@@ -38,21 +41,21 @@
                 Vào cửa hàng trên ứng dụng
                 <div class="header__qr">
                   <img
-                    src="./assets/img/qr_logo.png"
+                    src="../../assets/img/qr_logo.png"
                     alt="QR Code"
                     class="header__qr-img"
                   />
                   <div class="header__qr-apps">
                     <a href="#" class="header__qr-apps-link">
                       <img
-                        src="./assets/img/google_play.png"
+                        src="../../assets/img/google_play.png"
                         alt="Google Play"
                         class="apps__download-img"
                       />
                     </a>
                     <a href="#" class="header__qr-apps-link">
                       <img
-                        src="./assets/img/app_store.png"
+                        src="../../assets/img/app_store.png"
                         alt="App Store"
                         class="apps__download-img"
                       />
@@ -229,7 +232,12 @@
             </ul>
           </nav>
           <div class="header-with-search">
-            <div class="header__logo">
+            <label for="mobile-search-checkbox" class="header__mobile-search"
+              ><i
+                class="fa-solid fa-magnifying-glass header__mobile-search-icon"
+              ></i
+            ></label>
+            <div class="header__logo hide-on-tablet">
               <div class="header__logo-container">
                 <div class="logo-holder logo-4">
                   <a href="/" class="header__logo-link">
@@ -239,7 +247,12 @@
                 </div>
               </div>
             </div>
-
+            <input
+              type="checkbox"
+              hidden
+              id="mobile-search-checkbox"
+              class="header__search-checkbox"
+            />
             <div class="header__search">
               <div class="header__search-input-wrapper">
                 <input
@@ -312,11 +325,12 @@
                 <!-- No item in cart header__cart-list--nocart -->
                 <div class="header__cart-list">
                   <img
-                    src="https://down-vn.img.susercontent.com/file/1c26517c015f3f83fc0281177a6edabb_tn"
+                    src="../../assets/img/no_cart.png"
                     alt=""
                     class="header__cart-nocart-img"
                   />
                   <span class="header__cart-nocart-msg">Chưa có sản phẩm</span>
+
                   <!-- Cart index product start -->
                   <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                   <ul class="header__cart-list-item">
@@ -548,7 +562,6 @@
                   <button class="header__cart-view-cart btn btn--primary">
                     Xem giỏ hàng
                   </button>
-
                   <!-- Cart index product start -->
                 </div>
               </div>
@@ -556,18 +569,172 @@
             <!-- Header Cart end -->
           </div>
         </div>
+        <ul class="header__sort-bar">
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Liên quan</a>
+          </li>
+          <li class="header__sort-item header__sort-item--active">
+            <a href="" class="header__sort-link"> Mới nhất </a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link"> Bán chạy </a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">
+              Giá
+              <i class="header__sort-icon fas fa-angle-down"></i>
+            </a>
+          </li>
+        </ul>
       </header>
       <!-- Header end -->
-      <!-- Container start -->
+      <!-- Container product detail start -->
+
       <div class="app__container">
-        <div class="grid">Not fount</div>
+        <div class="grid wide">
+          <!-- Breadcrumb start -->
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumb-content">
+              <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-item__link"> Trang chủ </a>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+
+              <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-item__link"> Danh mục một </a>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+              <li class="breadcrumb-item breadcrumb-item--active">
+                <a href="#" class="breadcrumb-item__link">
+                  Áo phông nam nữ Tommy Hilfiger in vạch sọc đen trắng đỏ chữ kí
+                  quanh áo. Áo Thun Unisex Form Rộng Siêu Hot Phiên Bản Mới</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Breadcrumb end -->
+
+          <!-- Product detail start -->
+
+          <div class="product-detail">
+            <div class="product-detail-wrapper row">
+              <div class="col l-5 m-12 c-12 product-detail__img-wrapper">
+                <div class="product-detail__img">
+                  <img
+                    src="https://down-vn.img.susercontent.com/file/vn-11134201-23020-z3aqucatywnvbe_tn"
+                    alt=""
+                    class="product-detail__img-main"
+                    id="main-image"
+                  />
+             
+                  <div class="product-detail__img-list">
+                    <button id="prevButton" class="control-button">
+                      <span class="fa-solid fa-chevron-left"></span>
+                    </button>
+                    <div class="product-detail__img-slider">
+                      <img
+                      src="https://down-vn.img.susercontent.com/file/vn-11134201-23020-z3aqucatywnvbe_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    <img
+                      src="https://down-vn.img.susercontent.com/file/dd44320a188b3df8627218ab7fa92192_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    <img
+                      src="https://down-vn.img.susercontent.com/file/vn-11134201-23020-z3aqucatywnvbe_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    <img
+                      src="https://down-vn.img.susercontent.com/file/dd44320a188b3df8627218ab7fa92192_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    <img
+                      src="https://down-vn.img.susercontent.com/file/vn-11134201-23020-z3aqucatywnvbe_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    <img
+                      src="https://down-vn.img.susercontent.com/file/dd44320a188b3df8627218ab7fa92192_tn"
+                      alt=""
+                      class="product-detail__img-item"
+                    />
+                    </div>
+                    <button id="nextButton" class="control-button">
+                      <span class="fa-solid fa-chevron-right"></span>
+                    </button>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="col l-7 m-12 c-12 product-detail__info-wrapper">
+                <div class="product-detail__info">
+                  <h1 class="product-detail__info-name">
+                    Áo phông nam nữ Tommy Hilfiger in vạch sọc đen trắng đỏ chữ
+                    kí quanh áo. Áo Thun Unisex Form Rộng Siêu Hot Phiên Bản Mới
+                  </h1>
+               
+                  <div class="product-detail__info-price">
+                    <span class="product-detail__info-price-old">400.000đ</span>
+                    <span class="product-detail__info-price-current"
+                      >330.000đ</span
+                    >
+                    <span class="product-detail__info-price-sale"
+                      >-20% Giảm</span
+                    >
+                  </div>
+                  <div class="product-detail__info-quantity">
+                    <span class="product-detail__info-quantity-title"
+                      >Số lượng:</span
+                    >
+                    <div class="product-detail__info-quantity-btn">
+                      <span class="product-detail__info-quantity-btn-minus"
+                        ><i class="fa-solid fa-minus"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="product-detail__info-quantity-btn-input"
+                        value="1"
+                      />
+                      <span class="product-detail__info-quantity-btn-plus"
+                        ><i class="fa-solid fa-plus"></i
+                      ></span>
+                      
+                    </div>
+                    <div class="product-detail__info-inventory">
+                      <span class="product-detail__info-inventory-quantity">
+                        Còn 100 sản phẩm
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="product-detail__info-cart-btn">
+                    <button class="btn--cart__add">
+                      <i class="fas fa-cart-plus"></i>
+                      Thêm vào giỏ hàng
+                    </button>
+                    <button class="btn--cart__buyNow">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product detail end -->
+        </div>
       </div>
-      <!-- Container end -->
+
+      <!-- Breadcrumb end -->
+      <!-- Container product detail end  -->
       <!-- Footer start -->
       <footer class="footer">
-         <div class="grid">
-          <div class="grid__row">
-            <div class="grid__col-2-4">
+        <div class="grid wide">
+          <div class="row">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Chăm sóc khách hàng</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -596,7 +763,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__col-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Về chúng tôi</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -627,7 +794,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__col-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Theo dõi</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -650,46 +817,45 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__col-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <!-- Thanh toán -->
               <h3 class="footer__heading">Thanh toán</h3>
               <div class="footer__payment-method">
                 <div class="footer__payment-item">
                   <img
-                    src="./assets/img/card.png"
+                    src="../../assets/img/card.png"
                     alt="Master Card"
                     class="footer__payment-img"
                   />
                 </div>
                 <div class="footer__payment-item">
                   <img
-                    src="./assets/img/visa.png"
+                    src="../../assets/img/visa.png"
                     alt="Visa"
                     class="footer__payment-img"
                   />
                 </div>
               </div>
             </div>
-
-            <div class="grid__col-2-4">
+            <div class="col l-2-4 m-8 c-6">
               <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
               <div class="footer__download">
                 <img
-                  src="./assets/img/qr_logo.png"
+                  src="../../assets/img/qr_logo.png"
                   alt="Download QR"
                   class="footer__download-qr"
                 />
                 <div class="footer__download-apps">
                   <a href="#" class="footer__download-app-link">
                     <img
-                      src="./assets/img/google_play.png"
+                      src="../../assets/img/google_play.png"
                       alt="Google Play"
                       class="footer__download-app-img"
                     />
                   </a>
                   <a href="#" class="footer__download-app-link">
                     <img
-                      src="./assets/img/app_store.png"
+                      src="../../assets/img/app_store.png"
                       alt="App Store"
                       class="footer__download-app-img"
                     />
@@ -700,7 +866,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="grid">
+          <div class="grid wide">
             <p class="footer__text">
               @ 2021 - Bản quyền thuộc về Công ty Light Solution
             </p>
@@ -776,7 +942,7 @@
             >
               <span class="auth-form__logo-social-img">
                 <img
-                  src="./assets/img/google_signin.png"
+                  src="../../assets/img/google_signin.png"
                   alt="Google"
                   class="google-login__img"
                 />
@@ -844,7 +1010,7 @@
               <!-- <i class="auth-form__socials-icon fa-brands fa-google"></i> -->
               <span class="auth-form__logo-social-img">
                 <img
-                  src="./assets/img/google_signin.png"
+                  src="../../assets/img/google_signin.png"
                   alt="Google"
                   class="google-login__img"
                 />
@@ -858,5 +1024,6 @@
     </div>
     <!-- Modal form end -->
   </body>
-  <script src="./assets/js/main.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="main.js"></script>
 </html>
